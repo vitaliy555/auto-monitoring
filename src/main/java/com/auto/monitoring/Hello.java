@@ -17,16 +17,14 @@ public class Hello {
     public static void main(String[] args) throws IOException {
         String url = "http://auto.ria.com/search/?category_id=1&marka_id=47&model_id=0&state=0&currency=1#category_id=1&currency=1&marka_id[0]=47&model_id[0]=0&state[0]=0&countpage=10";
 
-        //Phanbedder to the rescue!
-        File phantomjs = Phanbedder.unpack();
-        DesiredCapabilities dcaps = new DesiredCapabilities();
-        dcaps.setCapability(PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY, phantomjs.getAbsolutePath());
-        PhantomJSDriver driver = new PhantomJSDriver(dcaps);
-//Usual Selenium stuff...
-        driver.get(url);
-        System.out.println(driver.getPageSource());
-//        WebElement query = driver.findElement(By.name("q"));
-        driver.quit();
+//
+//        PhantomJSDriver driver = new PhantomJSDriver(dcaps);
+//        //Usual Selenium stuff...
+//        driver.get(url);
+////        System.out.println(driver.getPageSource());
+//        System.out.println(driver.findElement(By.cssSelector(".ticket-item.paid")));
+////        WebElement query = driver.findElement(By.name("q"));
+//        driver.quit();
     }
 
 

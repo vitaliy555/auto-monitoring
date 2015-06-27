@@ -22,11 +22,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="auto-monitoring" />
+        <module name="auto-ria" />
+        <module name="utils" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="auto-monitoring" target="1.5" />
+      <module name="auto-ria" target="1.5" />
+      <module name="utils" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
