@@ -1,20 +1,33 @@
 package com.auto.monitoring;
 
+import net.anthavio.phanbedder.Phanbedder;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.phantomjs.PhantomJSDriver;
+import org.openqa.selenium.phantomjs.PhantomJSDriverService;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+import java.io.File;
 import java.io.IOException;
 
-import com.gargoylesoftware.htmlunit.*;
-import com.gargoylesoftware.htmlunit.html.HtmlPage;
-import org.jsoup.Jsoup;
+
 
 public class Hello {
     public static void main(String[] args) throws IOException {
-         WebClient webClient = new WebClient();
-        webClient.setCssEnabled(false);
-        webClient.setJavaScriptEnabled(false);
-            final HtmlPage page = webClient.getPage("http://rst.ua/oldcars/mazda/");
-        System.out.println(page.getHtmlElementById("rst-ocid-4449245").getId());
-        page.getElementsByName("rst-ocb-i rst-ocb-i-premium rst-uix-radius");
-        }
+        String url = "http://auto.ria.com/search/?category_id=1&marka_id=47&model_id=0&state=0&currency=1#category_id=1&currency=1&marka_id[0]=47&model_id[0]=0&state[0]=0&countpage=10";
 
-
+        //Phanbedder to the rescue!
+        File phantomjs = Phanbedder.unpack();
+        DesiredCapabilities dcaps = new DesiredCapabilities();
+        dcaps.setCapability(PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY, phantomjs.getAbsolutePath());
+        PhantomJSDriver driver = new PhantomJSDriver(dcaps);
+//Usual Selenium stuff...
+        driver.get(url);
+        System.out.println(driver.getPageSource());
+//        WebElement query = driver.findElement(By.name("q"));
+        driver.quit();
     }
+
+
+}
