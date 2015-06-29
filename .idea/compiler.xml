@@ -26,10 +26,10 @@
         <module name="utils" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="auto-monitoring" target="1.5" />
-      <module name="auto-ria" target="1.5" />
-      <module name="utils" target="1.5" />
+    <bytecodeTargetLevel target="1.7">
+      <module name="auto-monitoring" target="1.7" />
+      <module name="auto-ria" target="1.7" />
+      <module name="utils" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

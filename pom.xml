@@ -19,17 +19,23 @@
             <!--<artifactId>jsoup</artifactId>-->
             <!--<version>1.7.2</version>-->
         <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>org.seleniumhq.selenium</groupId>-->
-            <!--<artifactId>selenium-java</artifactId>-->
-            <!--<version>2.46.0</version>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>2.46.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-chrome-driver</artifactId>
+            <version>2.46.0</version>
+        </dependency>
 
         <dependency>
-            <groupId>com.github.detro.ghostdriver</groupId>
+            <groupId>com.github.detro</groupId>
             <artifactId>phantomjsdriver</artifactId>
-            <version>1.0.4</version>
+            <version>1.2.0</version>
         </dependency>
+
         <dependency>
             <groupId>net.anthavio</groupId>
             <artifactId>phanbedder-1.9.8</artifactId>
@@ -43,6 +49,11 @@
             <version>18.0</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.12</version>
+        </dependency>
 
     </dependencies>
 
