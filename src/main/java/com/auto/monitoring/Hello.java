@@ -1,51 +1,45 @@
 package com.auto.monitoring;
 
-import com.gargoylesoftware.htmlunit.BrowserVersion;
-import net.anthavio.phanbedder.Phanbedder;
-import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.htmlunit.HtmlUnitDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.phantomjs.PhantomJSDriver;
-import org.openqa.selenium.phantomjs.PhantomJSDriverService;
-import org.openqa.selenium.remote.CommandExecutor;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
-
 import java.io.File;
 import java.io.IOException;
-import java.net.URL;
 import java.util.List;
 
+import net.anthavio.phanbedder.Phanbedder;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.phantomjs.PhantomJSDriver;
+import org.openqa.selenium.phantomjs.PhantomJSDriverService;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class Hello {
     public static void main(String[] args) throws IOException, InterruptedException {
-//        DesiredCapabilities caps = new DesiredCapabilities();
-//        caps.setJavascriptEnabled(true);                //< not really needed: JS enabled by default
-//        caps.setCapability("takesScreenshot", true);    //< yeah, GhostDriver haz screenshotz!
-//        caps.setCapability(
-//                PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY,
-//                Phanbedder.unpack().getAbsolutePath()
-//        );
+        PhantomJSDriver driver = null;
+        try {
+            File phantomjs = Phanbedder.unpack(); //Phanbedder to the rescue!
+            DesiredCapabilities dcaps = new DesiredCapabilities();
+            dcaps.setCapability(PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY, phantomjs.getAbsolutePath());
+            driver = new PhantomJSDriver(dcaps);
+            driver.get("http://auto.ria.com");
 
-        // Launch driver (will take care and ownership of the phantomjs process)
-        System.setProperty("webdriver.chrome.driver", "D:/idea/drivers/chromedriver.exe");
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("window-size=0,0");
+            // Find the text input element by its name
+            List<WebElement> marks = driver.findElements(By.cssSelector("#marks > option"));
+            for (WebElement we : marks) {
+                System.out.println(we.getText());
+            }
+            System.out.println("Page title is: " + driver.getTitle());
 
-        DesiredCapabilities capabilities = DesiredCapabilities.chrome();
-        capabilities.setCapability(ChromeOptions.CAPABILITY, options);
-        WebDriver driver = new ChromeDriver(capabilities);
-        driver.get("http://auto.ria.com");
 
-        Thread.sleep(5000l);
 
-        List<WebElement> markElements = driver.findElements(By.cssSelector("#marks > option"));
-        System.out.println(markElements.size());
-        driver.quit();
+            System.out.println("Page title is: " + driver.getTitle());
+
+        } catch (Exception e) {
+            System.out.println(e);
+        } finally {
+            // Close the browser
+            driver.quit();
+        }
     }
-
 
 }

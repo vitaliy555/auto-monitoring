@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/auto-monitoring.iml" filepath="$PROJECT_DIR$/auto-monitoring.iml" />
       <module fileurl="file://$PROJECT_DIR$/auto-ria/auto-ria.iml" filepath="$PROJECT_DIR$/auto-ria/auto-ria.iml" />
+      <module fileurl="file://$PROJECT_DIR$/auto-ria/auto-ria.iml" filepath="$PROJECT_DIR$/auto-ria/auto-ria.iml" />
+      <module fileurl="file://$PROJECT_DIR$/utils/utils.iml" filepath="$PROJECT_DIR$/utils/utils.iml" />
       <module fileurl="file://$PROJECT_DIR$/utils/utils.iml" filepath="$PROJECT_DIR$/utils/utils.iml" />
     </modules>
   </component>

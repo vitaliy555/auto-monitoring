@@ -18,27 +18,66 @@
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/.idea/compiler.xml">
+        <entry key="$PROJECT_DIR$/../../ctco-mcom/cq/marks-dao/src/main/java/com/marks/dto/Product.java">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/auto-ria/pom.xml">
+        <entry key="$PROJECT_DIR$/../../ctco-mcom/cq/marks-feed-generation/src/test/java/com/marks/feed/impl/jmx/AnnotatedEmitterMXBeanSupportTest.java">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/auto-ria/src/main/java/auto/ria/connector/AutoRiaConnector.java">
+        <entry key="$PROJECT_DIR$/../../ctco-mcom/cq/marks-model/src/main/java/com/marks/model/product/detail/PrdPriceBean.java">
+          <value>
+            <set>
+              <SonarIssue>
+                <option name="isNew" value="true" />
+                <option name="key" value="aedbbdd7-3fcc-4ec8-9245-5d84d37e58a9" />
+                <option name="line" value="68" />
+                <option name="message" value="Parameter currentPage should be final." />
+                <option name="ruleKey" value="checkstyle:com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck" />
+                <option name="severity" value="MAJOR" />
+              </SonarIssue>
+            </set>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../ctco-mcom/cq/marks-model/src/test/java/com/marks/model/menu/MainMenuBeanTest.java">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/auto-ria/src/test/java/auto.ria.data.colector/CollectorSearchDataAutoRia.java">
+        <entry key="$PROJECT_DIR$/../../ctco-mcom/cq/marks-model/src/test/java/com/marks/model/product/detail/PrdPriceBeanTest.java">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/auto-ria/src/test/java/auto.ria.data.colector/CollectorSearchDataOnAutoRia.java">
+        <entry key="$PROJECT_DIR$/../../ctco-mcom/cq/marks-model/src/test/java/com/marks/model/product/details/PrdPriceBeanTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../ctco-mcom/cq/marks-services/src/main/java/com/marks/services/pla/feed/PlaImageHelper.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../ctco-mcom/cq/marks-view/src/main/content/jcr_root/apps/marks/components/product-detail/prd-add-to-cart/clientlibs/js/dust-templates.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../ctco-mcom/cq/marks-view/src/main/content/jcr_root/apps/marks/components/product-detail/prd-sku-selector/clientlibs/js/prd-product-model.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../ctco-mcom/cq/marks-view/src/main/content/jcr_root/apps/marks/components/product-list/plp-quick-view/plp-quick-view-product.dust">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/auto-monitoring.iml">
           <value>
             <set />
           </value>
@@ -48,22 +87,7 @@
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/src/main/java/com/auto/monitoring/Constants.java">
-          <value>
-            <set />
-          </value>
-        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/com/auto/monitoring/Hello.java">
-          <value>
-            <set />
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/utils/src/main/java/com/auto/monitoring/utils/DesiredCapabilitiesCustImpl.java">
-          <value>
-            <set />
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/utils/src/main/java/com/auto/monitoring/utils/SettingWebDriverCapability.java">
           <value>
             <set />
           </value>
